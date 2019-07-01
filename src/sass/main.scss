@@ -9,7 +9,6 @@ body {
 
 .grey-line {
   width: 100%;
-  height: auto;
   background-color: #f5f5f5;
   border-bottom: 2px solid #ffae00;
   height: 38px;
@@ -17,8 +16,7 @@ body {
 
 .grey-line .callback-block span {
   color: #0e4ca1;
-  font-size: 16px;
-  font-family: OpenSansRegular;
+  font: 16px Open Sans;
   margin-right: 15px;
   display: block;
 }
@@ -78,8 +76,7 @@ body {
   list-style: none;
   float: left;
   margin-right: 30px;
-  font-size: 16px;
-  font-family: OpenSansBold, sans-serif;
+  font: bold 16px Open Sans, sans-serif;
   text-transform: uppercase;
 }
 
@@ -112,8 +109,7 @@ body {
 .menu-top .menu li {
   list-style: none;
   float: left;
-  font-size: 16px;
-  font-family: OpenSansBold,sans-serif;
+  font: bold 16px Open Sans,sans-serif;
   text-transform: uppercase;
 }
 
@@ -155,7 +151,7 @@ body {
 
 .content h1{
   font-size: 34px;
-  font-family: "Open sans";
+  font: 34px Open Sans;
   color: #fff;
   line-height: 1.2;
   background: #005bea;
@@ -169,8 +165,7 @@ body {
 }
 
 .content h2{
-  font-size: 20px;
-  font-family: "Open sans";
+  font:20px Open sans;
   color: #005bea;
   line-height: 1.2;
   background: #fff;

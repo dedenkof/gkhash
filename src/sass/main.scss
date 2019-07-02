@@ -28,9 +28,11 @@ body {
 .grey-line {
   order: 1;
 }
+
 .menu-top {
   order: 2;
 }
+
 .index-bg {
   order: 3;
 }
@@ -44,6 +46,7 @@ body {
 .menu-top {
   order: 2;
 }
+
 .menu-top {
   width: 100%;
   height: auto;
@@ -54,6 +57,7 @@ body {
 .menu-top {
   order: 2;
 }
+
 .footer-new, .menu-top {
   width: 100%;
   height: auto;
@@ -76,17 +80,19 @@ body {
   list-style: none;
   float: left;
   margin-right: 30px;
-  font:bold 16px Open Sans,sans-serif;
+  font: bold 16px Open Sans, sans-serif;
   text-transform: uppercase;
 }
 
 .menu-top .menu li a {
   padding-bottom: 3px;
 }
+
 .menu-top .menu li a {
-  color: #fff!important;
+  color: #fff !important;
   transition: none;
 }
+
 .menu-top a {
   text-decoration: none;
 }
@@ -94,6 +100,7 @@ body {
 .dropdown-menu-first {
   left: -132px;
 }
+
 .dropdown-menu {
   margin-top: 15px;
   background-color: #5b5b5b;
@@ -102,14 +109,14 @@ body {
 }
 
 .menu-top .dropdown-menu li {
-  width: 100%!important;
-  margin: 0!important;
+  width: 100% !important;
+  margin: 0 !important;
 }
 
 .menu-top .menu li {
   list-style: none;
   float: left;
-  font: bold 16px Open Sans,sans-serif;
+  font: bold 16px Open Sans, sans-serif;
   text-transform: uppercase;
 }
 
@@ -120,7 +127,7 @@ body {
   z-index: 10;
   background: #fff;
   min-height: 350px;
-  box-shadow: 7px 10px 2px rgba(0,0,0,0.4);
+  box-shadow: 7px 10px 2px rgba(0, 0, 0, 0.4);
 }
 
 .bg {
@@ -131,13 +138,13 @@ body {
   padding-bottom: 35px;
 }
 
-.index-bg{
+.index-bg {
   position: relative;
   order: 3;
   background: url('../img/gk_hashtag_slide_bg_satur.jpg') top center / cover;
 }
 
-.rope{
+.rope {
   height: 26px;
   position: absolute;
   top: 105px;
@@ -147,7 +154,7 @@ body {
   filter: drop-shadow(2px 2px 5px #0c9f99);
 }
 
-.content h1{
+.content h1 {
   font: 34px Open sans;
   color: #fff;
   line-height: 1.2;
@@ -161,7 +168,7 @@ body {
   margin-right: auto;
 }
 
-.content h2{
+.content h2 {
   font: 20px Open sans;
   color: #005bea;
   line-height: 1.2;
@@ -175,18 +182,18 @@ body {
   margin-right: auto;
 }
 
-.gk-hash-item{
+.gk-hash-item {
   position: relative;
 }
 
-.gk-pin{
+.gk-pin {
   position: absolute;
   top: -30px;
   z-index: 2;
 
 }
 
-.gk-img{
+.gk-img {
   position: absolute;
   top: 46px;
   z-index: 1;
@@ -196,21 +203,21 @@ body {
   height: 262px;
 }
 
-.gk-img__1{
+.gk-img__1 {
   background: url(../img/gk_cards_uk1.jpg) no-repeat;
   left: 0;
   transform: rotate(4deg);
   background-size: 100% 100%;
 }
 
-.gk-img__2{
+.gk-img__2 {
   background: url(../img/gk_cards_uk2.jpg) no-repeat;
   top: 60px;
   left: 210px;
   background-size: 100% 100%;
 }
 
-.gk-img__3{
+.gk-img__3 {
   background: url(../img/gk_cards_uk3.jpg) no-repeat;
   top: 60px;
   left: 420px;
@@ -218,7 +225,7 @@ body {
   transform: rotate(4deg);
 }
 
-.gk-pin__red{
+.gk-pin__red {
   background: url(../img/pin_red.png) no-repeat;
   top: -10px;
   left: 56px;
@@ -226,10 +233,10 @@ body {
   height: 65px;
   transform: rotate(-5deg);
   background-size: 100% 100%;
-  filter: drop-shadow(2px 2px 2px rgba(56,0,1, .3));
+  filter: drop-shadow(2px 2px 2px rgba(56, 0, 1, .3));
 }
 
-.gk-pin__blue{
+.gk-pin__blue {
   background: url(../img/pin_blue.png) no-repeat;
   top: 4px;
   left: 300px;
@@ -237,10 +244,10 @@ body {
   height: 65px;
   transform: rotate(6deg);
   background-size: 100% 100%;
-  filter: drop-shadow(2px 2px 2px rgba(0,62,102, .3));
+  filter: drop-shadow(2px 2px 2px rgba(0, 62, 102, .3));
 }
 
-.gk-pin__green{
+.gk-pin__green {
   background: url(../img/pin_green.png) no-repeat;
   top: 4px;
   left: 500px;
@@ -248,35 +255,35 @@ body {
   height: 65px;
   transform: rotate(-6deg);
   background-size: 100% 100%;
-  filter: drop-shadow(2px 2px 2px rgba(0,101,46, .3));
+  filter: drop-shadow(2px 2px 2px rgba(0, 101, 46, .3));
 }
 
 
 .swing-rope {
   animation: swingRope ease-in-out 10s infinite alternate;
   transform-origin: center -20px;
-  float:left;
+  float: left;
 }
 
 .swing-img__1 {
   animation: swingImg ease-in-out 6s infinite alternate;
   transform-origin: center -20px;
-  float:left;
+  float: left;
 }
 
 .swing-img__2 {
   animation: swingImg ease-in-out 5s infinite alternate;
   transform-origin: center -20px;
-  float:left;
+  float: left;
 }
 
 .swing-img__3 {
   animation: swingImg ease-in-out 5s infinite alternate;
   transform-origin: center -5px;
-  float:left;
+  float: left;
 }
 
-.circles{
+.circles {
   position: absolute;
   top: 0;
   left: 0;
@@ -285,7 +292,7 @@ body {
   overflow: hidden;
 }
 
-.circles li{
+.circles li {
   position: absolute;
   display: block;
   list-style: none;
@@ -297,7 +304,7 @@ body {
 
 }
 
-.circles li:nth-child(1){
+.circles li:nth-child(1) {
   left: 25%;
   width: 80px;
   height: 80px;
@@ -305,7 +312,7 @@ body {
 }
 
 
-.circles li:nth-child(2){
+.circles li:nth-child(2) {
   left: 10%;
   width: 20px;
   height: 20px;
@@ -313,14 +320,14 @@ body {
   animation-duration: 12s;
 }
 
-.circles li:nth-child(3){
+.circles li:nth-child(3) {
   left: 70%;
   width: 20px;
   height: 20px;
   animation-delay: 4s;
 }
 
-.circles li:nth-child(4){
+.circles li:nth-child(4) {
   left: 40%;
   width: 60px;
   height: 60px;
@@ -328,28 +335,28 @@ body {
   animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
+.circles li:nth-child(5) {
   left: 65%;
   width: 20px;
   height: 20px;
   animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
+.circles li:nth-child(6) {
   left: 75%;
   width: 110px;
   height: 110px;
   animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
+.circles li:nth-child(7) {
   left: 35%;
   width: 150px;
   height: 150px;
   animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.circles li:nth-child(8) {
   left: 50%;
   width: 25px;
   height: 25px;
@@ -357,7 +364,7 @@ body {
   animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
+.circles li:nth-child(9) {
   left: 20%;
   width: 15px;
   height: 15px;
@@ -365,7 +372,7 @@ body {
   animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
+.circles li:nth-child(10) {
   left: 85%;
   width: 150px;
   height: 150px;
@@ -375,13 +382,13 @@ body {
 
 
 @keyframes animate {
-  0%{
+  0% {
     transform: translateY(0) rotate(0deg);
     opacity: 1;
     border-radius: 0;
   }
 
-  100%{
+  100% {
     transform: translateY(-1000px) rotate(720deg);
     opacity: 0;
     border-radius: 50%;
@@ -390,14 +397,24 @@ body {
 }
 
 @keyframes swingImg {
-  0% { transform: rotate(1deg); }
-  100% { transform: rotate(-1deg); }
+  0% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
 }
 
 
 @keyframes swingRope {
-  0% { transform: rotate(4deg); }
-  50% { transform: rotate(2deg); }
-  100% { transform: rotate(4deg); }
+  0% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(4deg);
+  }
 }
 

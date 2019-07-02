@@ -57,7 +57,7 @@ const path = {
             custom: 'build/css/custom.min.css'
         },
         js: {
-            jsHTML5:{
+            jsHTML5: {
                 es5: 'build/js/html5shiv/es5-shim.min.min.js',
                 print: 'build/js/html5shiv/html5shiv-printshiv.min.min.js',
                 html5shiv: 'build/js/html5shiv/html5shiv.min.min.js'
@@ -122,7 +122,6 @@ const options = {
 };
 
 
-
 // browserSync config
 const config = {
     server: {
@@ -137,7 +136,7 @@ const config = {
 };
 
 // Notify error
-const onError = function(err) {
+const onError = function (err) {
     notify.onError({
         title: 'Error in ' + err.plugin,
     })(err);
@@ -153,8 +152,8 @@ gulp.task('copyLibsCSS', () =>
             '/**/*.js',
             '/**/bootstrap-reboot.min.css'
         ]
-    }), { base: './node_modules' })
-        .pipe(flatten({ includeParents: 1}))
+    }), {base: './node_modules'})
+        .pipe(flatten({includeParents: 1}))
         .pipe(sourcemaps.init())
         //.pipe(gcmq())
         //.pipe(concat('libs.css'))
@@ -177,9 +176,9 @@ gulp.task('copyLibsJS', () =>
             '/**/jquery.slim.min.js',
             '/**/bootstrap.bundle.min.js'
         ]
-    }), { base: './node_modules' })
-        .pipe(flatten({ includeParents: 1}))
-        .pipe(plumber({ errorHandler: onError }))
+    }), {base: './node_modules'})
+        .pipe(flatten({includeParents: 1}))
+        .pipe(plumber({errorHandler: onError}))
         .pipe(sourcemaps.init())
         //.pipe(minJS())
         //.pipe(concat('libs.js'))
@@ -194,7 +193,7 @@ gulp.task('copyLibsJS', () =>
 // Deploy html files (rigger template from ./tempalte )
 gulp.task('html', () =>
     gulp.src(path.src.html)
-        .pipe(plumber({ errorHandler: onError }))
+        .pipe(plumber({errorHandler: onError}))
         .pipe(includeFiles())
         //.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
         /*.pipe(htmlmin({
@@ -210,10 +209,10 @@ gulp.task('html', () =>
 // Deploy css via sass preprocessor
 gulp.task('sass', () =>
     gulp.src(path.src.sass)
-        .pipe(plumber({ errorHandler: onError }))
+        .pipe(plumber({errorHandler: onError}))
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'expanded'}))
-        .pipe(postcss([ autoprefixer() ]))
+        .pipe(postcss([autoprefixer()]))
         .pipe(gcmq())
         .pipe(concat('custom.css'))
         .pipe(rename({suffix: '.min'}))
@@ -223,15 +222,14 @@ gulp.task('sass', () =>
         .pipe(browserSync.reload({
             stream: true
         }))
-
 );
 
 // Copy src/css/libs and node_modules source to build/css
 gulp.task('cssLibs', () =>
     gulp.src(path.src.cssLib)
-        .pipe(plumber({ errorHandler: onError }))
+        .pipe(plumber({errorHandler: onError}))
         .pipe(sourcemaps.init())
-        .pipe(postcss([ autoprefixer() ]))
+        .pipe(postcss([autoprefixer()]))
         .pipe(gcmq())
         //.pipe(concat('libs.css'))
         .pipe(rename({suffix: '.min'}))
@@ -249,7 +247,7 @@ gulp.task('cssLibs', () =>
 gulp.task('scriptsLibs', () =>
     gulp.src(path.src.jsLib)
         .pipe(includeFiles())
-        .pipe(plumber({ errorHandler: onError }))
+        .pipe(plumber({errorHandler: onError}))
         .pipe(sourcemaps.init())
         .pipe(minJS())
         ///.pipe(concat('libs.js'))
@@ -259,14 +257,13 @@ gulp.task('scriptsLibs', () =>
         .pipe(browserSync.reload({
             stream: true
         }))
-
 );
 
 // Transfer custom js to build
 gulp.task('scripts', () =>
     gulp.src(path.src.js)
         .pipe(includeFiles())
-        .pipe(plumber({ errorHandler: onError }))
+        .pipe(plumber({errorHandler: onError}))
         .pipe(sourcemaps.init())
         .pipe(minJS())
         //.pipe(concat('general.js'))
@@ -276,7 +273,6 @@ gulp.task('scripts', () =>
         .pipe(browserSync.reload({
             stream: true
         }))
-
 );
 
 // Include style, js, favicon and markup to main page
@@ -299,7 +295,7 @@ gulp.task('inject', (done) => {
 
     gulp.src(path.src.html)
         .pipe(includeFiles())
-        .pipe(inject(injectStyles, {ignorePath:  'build', addRootSlash: false, relative: false}))
+        .pipe(inject(injectStyles, {ignorePath: 'build', addRootSlash: false, relative: false}))
         .pipe(inject(injectScripts, {ignorePath: 'build', addRootSlash: false, relative: false}))
 
         .pipe(gulp.dest(path.build.html))
@@ -308,7 +304,6 @@ gulp.task('inject', (done) => {
         }));
     done();
 });
-
 
 
 // Copy all generated img files into build directory
@@ -352,8 +347,6 @@ gulp.task('fonts', () =>
 );
 
 
-
-
 // reload after change via browserSync
 gulp.task('serve', () => {
         browserSync(config);
@@ -366,8 +359,7 @@ gulp.task('clean', (cb) =>
 );
 
 
-
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     /*gulp.watch(path.watch.pug, gulp.series('pug'));
      gulp.watch(path.watch.htaccess, gulp.series('htaccess'));*/
     gulp.watch(path.watch.html, gulp.series('html', 'inject'));
@@ -390,7 +382,7 @@ gulp.task('assetsBASE', gulp.series(['html']));  // IF need add 'pug', 'php', ta
 
 gulp.task('assetsCSS', gulp.series(['sass', 'cssLibs', 'copyLibsCSS'])); // IF need add stylus
 
-gulp.task('assetsJS', gulp.series([ 'scriptsLibs', 'copyLibsJS', 'scripts']));
+gulp.task('assetsJS', gulp.series(['scriptsLibs', 'copyLibsJS', 'scripts']));
 
 gulp.task('assetsIMG', gulp.series(['images']));
 

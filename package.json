@@ -4,6 +4,7 @@
   "main": "gulpfile.js",
   "private": true,
   "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
     "jquery": "^3.3.1"
   },
   "devDependencies": {
@@ -11,12 +12,14 @@
     "browser-sync": "^2.26.3",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.0",
+    "gulp-cache": "^1.1.2",
     "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-flatten": "^0.4.0",
     "gulp-google-webfonts": "^2.0.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.0.0",
     "gulp-inject": "^5.0.2",
     "gulp-notify": "^3.2.0",
     "gulp-npm-dist": "^1.0.2",
@@ -30,7 +33,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svgmin": "^2.1.0",
     "gulp-uglify": "^3.0.1",
-    "gulp.spritesmith": "^6.9.0",
+    "gulp.spritesmith": "^6.10.1",
     "imagemin-gifsicle": "^6.0.1",
     "imagemin-jpegtran": "^6.0.0",
     "imagemin-optipng": "^6.0.0",
@@ -39,6 +42,12 @@
     "rimraf": "^2.6.3",
     "stylelint": "^9.10.1"
   },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

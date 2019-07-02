@@ -9,6 +9,7 @@ body {
 
 .grey-line {
   width: 100%;
+  height: auto;
   background-color: #f5f5f5;
   border-bottom: 2px solid #ffae00;
   height: 38px;
@@ -16,7 +17,8 @@ body {
 
 .grey-line .callback-block span {
   color: #0e4ca1;
-  font: 16px Open Sans;
+  font-size: 16px;
+  font-family: OpenSansRegular;
   margin-right: 15px;
   display: block;
 }
@@ -76,7 +78,8 @@ body {
   list-style: none;
   float: left;
   margin-right: 30px;
-  font: bold 16px Open Sans, sans-serif;
+  font-size: 16px;
+  font-family: OpenSansBold,sans-serif;
   text-transform: uppercase;
 }
 
@@ -84,7 +87,7 @@ body {
   padding-bottom: 3px;
 }
 .menu-top .menu li a {
-  color: #fff;
+  color: #fff!important;
   transition: none;
 }
 .menu-top a {
@@ -102,14 +105,15 @@ body {
 }
 
 .menu-top .dropdown-menu li {
-  width: 100%;
-  margin: 0;
+  width: 100%!important;
+  margin: 0!important;
 }
 
 .menu-top .menu li {
   list-style: none;
   float: left;
-  font: bold 16px Open Sans,sans-serif;
+  font-size: 16px;
+  font-family: OpenSansBold,sans-serif;
   text-transform: uppercase;
 }
 
@@ -122,10 +126,6 @@ body {
   box-shadow: 7px 10px 2px rgba(0,0,0,0.4);
 }
 
-.index-bg {
-  order: 3;
-  position: relative;
-}
 .bg {
   width: 100%;
   min-height: 337px;
@@ -136,14 +136,14 @@ body {
 
 .index-bg{
   position: relative;
-  background: url('https://previews.dropbox.com/p/thumb/AAeC3ghCLbF4BLCEmxOtJIN0XwVltteZCgIjyYyRjLRdcWi9V0-H4386lTFOxlfk6GwEDnCkAtTZaSAR2kLAts5ncU5kXm7xdA_NSOocOY0h7fE9OmrdAxep0lOpifbz9A8b1lWa96ht7qncM2wOSgyeUsl4cCfj5Gt79aRlshIjhyjiTzIbcn-pUrbL6YGUYKM-y0C_9TAkpEeE8X0S0bZuaRy5JqMZBa9Nrj9D5dK6Ju1HWzcRA600801ucKH4JnPpjPXtFFRnrjXIV3VQYbw2JqmyQOhBC4dvRTChDYmmJ6OSl9hyiGannFUwtNtabQJkLsbRL2kuMjNWX8o314Y_/p.jpeg?fv_content=true&size_mode=5') top center / cover;
+  background: url('../img/gk_hashtag_slide_bg_satur.jpg') top center / cover;
 }
 
 .rope{
   height: 26px;
   position: absolute;
   top: 105px;
-  background: url('https://previews.dropbox.com/p/thumb/AAcJxD3mwh2F_G6O5pj5VPRCgg-erAKP1JVttFXm7CcNAq0ZFkVBk7xbIV--BDFkiiS56wN6Z0rhSn8jUnq8eWLSrLhEsJsNDU5Earnke2wjg2X5i9sPvIsLI1cy83-Nf3e3Lvzx2ppxAOg_bPavkbRzBh0UJBLVt9lCk1w03r0pBopZvww06_XiE7wSntImkUP4HAysy0iSlriiXDTa5MC6-E9kmFjo0Ky0CRxFynE4KJAVSZPL3InJY8OK1Uye1gNtpsRGQ_O5njWV2R1ouOYjWOSI7F3BcUDmtVsYxYPeKBZmt8POm7laHzBoqJ56SXfhjpc81FmVf5OYs7_axX04/p.png?fv_content=true&size_mode=5') center top;
+  background: url('../img/rope.png') center top;
   width: 100%;
   background-size: 100% 100%;
   filter: drop-shadow(2px 2px 5px #0c9f99);
@@ -151,7 +151,7 @@ body {
 
 .content h1{
   font-size: 34px;
-  font: 34px Open Sans;
+  font-family: "Open sans";
   color: #fff;
   line-height: 1.2;
   background: #005bea;
@@ -165,7 +165,8 @@ body {
 }
 
 .content h2{
-  font:20px Open sans;
+  font-size: 20px;
+  font-family: "Open sans";
   color: #005bea;
   line-height: 1.2;
   background: #fff;
@@ -201,21 +202,21 @@ body {
 }
 
 .gk-img__1{
-  background: url(https://previews.dropbox.com/p/thumb/AAfPeRdrzgQfD35J7-m4AuAkiWtRHIwOGDseZDNoivS4veHu_QLxUquC-dDmXvVZhOafZ-saku0yKCCEKtDTbf1pqEZ01phfWJpuztIKYEzkfCObdDwEUdOw4FatKLlSRqXp90armOhmfhUL2lFIGFPv5zrloxx6efUZ-OFqDQaUEShtRJOiAOAiNmyftr-0PTiDRvfHuilkJ_G2KD9LbBmMPplMRWKKPx-sRtMxEJv8nmXqsc8Z8HuRMqmu1OQt-9A5y9_FTSC7LCTWDqFg9TWt0WtYdn2DQUrXmT8iaes5KvuRhlyIMqTtqF86FAggPMgtWACaxHV7Hz5eb7LEQrc2/p.jpeg?fv_content=true&size_mode=5) no-repeat;
-  left: 0px;
+  background: url(../img/gk_cards_uk1.jpg) no-repeat;
+  left: 0;
   transform: rotate(4deg);
   background-size: 100% 100%;
 }
 
 .gk-img__2{
-  background: url(https://previews.dropbox.com/p/thumb/AAfjs8KwADw2Ho9HTSTd_NX5fHvWQ1TB5fk8HYrVACjbFrtHzUX621CXzcGcraYvgio3-2vC6sVc2mumimNdgUF6gs91O9aXNDSG3wCJ4GNFDeTRLLgD3kixJ5qwOt_D5muYaAJa2pmP4aoXWLcRGVwsmYMCQceZaoDxfBxlb0IJnbSVRCZcXxGYY56RjhKIndUaiFRKbRep2i0DxYKvacypfQbN_aUGGegIUFdlnKV1FrECnoR_fwk3EQQlsWB4kCdKizKVe2rgBrU_LNdUoNfVGEhOvSbJ64TL6tIfpmNqkAftHQBUO1pV2GpuWGU4BSQSAxPfsc0NEhwl68voQz9B/p.jpeg?fv_content=true&size_mode=5) no-repeat;
+  background: url(../img/gk_cards_uk2.jpg) no-repeat;
   top: 60px;
   left: 210px;
   background-size: 100% 100%;
 }
 
 .gk-img__3{
-  background: url(https://previews.dropbox.com/p/thumb/AAddzjN5CZw1Ix_T598rxFgPdG6ymjWJTKbic5J9ZrAKMwhJ3Dikl6SNur9f3ZUrzCQT53Rj3ZW78XSIU8OPDDz57VWLJ_v6_mpiBaThjCKN5ACcLwN79QOYgDP217nJIWGEiTg1uFnBALTtcNQGkqulNmk0Af6ofv9CQVTqB3nEW6zwmxrFR_CePxujQNlzvX6s73OuQtmdqc-XMn2S-NOzDCsi8zQmdkN0_BsXw2ECh7C5uTULiIRaMcBIM-PZLO4YzCoQuAdGiK_huNZxOMPeHWDi58ZKd9RDE86Fa6MdrU-lyxvEq2l0z_Xun3klc06wVsnQKTFgheTWV4kGPQNp/p.jpeg?fv_content=true&size_mode=5) no-repeat;
+  background: url(../img/gk_cards_uk3.jpg) no-repeat;
   top: 60px;
   left: 420px;
   background-size: 100% 100%;
@@ -223,7 +224,7 @@ body {
 }
 
 .gk-pin__red{
-  background: url(https://previews.dropbox.com/p/thumb/AAfcE3NaJaDwqISm7_Xim_Yc6yrQDu_5IVUblfWIQIOea_z7hdu5ViQpcDJhxrpAX0dPxNqS5yQj892IuDwWMDMRq_1LMBb4KXqqhhUhmziemKop-ClUUBzu7-4k4srPgj1ZkFpL9-MrQuIQ2c-VtRjPmEvcTDD-sZKzf5NNe1054tRRrXKVKVIKZq8SrvVO97oW2Gh4muPqCVFQ1iVvYVa-lThgGCcnxJ4a8Hek0awz3lxCu__r8QngUvdvoHwQTwZ7MtJHF2rns8XxLycXQJrd8JE_5eV_GBitIc99C2f3rghlcXYZr8lj95Rqw8Dfx-X07lUEdNx7IiJoAMxbnPUE/p.png?fv_content=true&size_mode=5) no-repeat;
+  background: url(../img/pin_red.png) no-repeat;
   top: -10px;
   left: 56px;
   width: 17px;
@@ -234,7 +235,7 @@ body {
 }
 
 .gk-pin__blue{
-  background: url(https://previews.dropbox.com/p/thumb/AAe5AkYLt4N3N3feOFsmxTJErlYdb-fclJ5iz8UfdG8I_FJopFbwyZLNfuyYvIBi0I2Av4I7oVMs3Pwj3wtaxltpOmVR9rsGGD9diWwETdEEVaR7nL0_1xsaZp9MYSLrN4Vh-7j7UzZaO2-1a6Wd8r00Gc2c08stPVzLgpx93SQLwg3uuZp4QC85SSRbzYwSslW98fnU3k7Pu5wEuJ98uBoH2Nr5thVJLqCxXMI-LWur57RUnWaFoPs6yZUPA6osorgwp7mgzO_kEKeQJjT21oDGs6odThRRbTYXvmF24Q1Uj0BsEMS6OgCcSAUmzQ0Ec9pAnhmFUgB9zzQP3tVSTH8Y/p.png?fv_content=true&size_mode=5) no-repeat;
+  background: url(../img/pin_blue.png) no-repeat;
   top: 4px;
   left: 300px;
   width: 17px;
@@ -245,7 +246,7 @@ body {
 }
 
 .gk-pin__green{
-  background: url(https://previews.dropbox.com/p/thumb/AAdHCs1CFXIauhYrtLQjp7r-iZ1oUHpJqeR02CmEVABfoNYTHzv5R5CpQ3ua43H0bBGDzz5c1BYcWFPb2hqiRvf-8DeUI51QhOxMv5grKOIg-4SKWxoWbhOpCTI15Z1W6BQOwEpOhEvrYXMYpFlHgqtC-tTKlqjBGUujGlSftDNd79aHevvFYmjkLu7Om4ctwO9McDzp3K2im5Yk_NHAECYVBdfpWKatXe2X241P22TgtEtFKuQ05nQ1LJf3I2NDrNcEPCm5LHVv5qJEpQMrZh-dTcmLjW-JV8OsxhewYzYvOaY0tfQvKHaIR8mnTY4bNyqS1tEJEfxxEH0QYMstTWA8/p.png?fv_content=true&size_mode=5) no-repeat;
+  background: url(../img/pin_green.png) no-repeat;
   top: 4px;
   left: 500px;
   width: 17px;

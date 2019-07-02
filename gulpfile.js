@@ -1,5 +1,5 @@
 'use strict';
-// Del autoprefixer, gulp-group-css-media-queries
+// Del autoprefixer, gulp-group-css-media-queries, cache
 const gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     postcss = require('gulp-postcss'),
@@ -12,6 +12,7 @@ const gulp = require('gulp'),
     gcmq = require('gulp-group-css-media-queries'),
     cleanCSS = require('gulp-clean-css'),
     minJS = require('gulp-uglify'),
+    cache = require('gulp-cache'),
     rename = require('gulp-rename'),
     includeFiles = require('gulp-rigger'),
     browserSync = require('browser-sync'),
@@ -156,7 +157,7 @@ gulp.task('copyLibsCSS', () =>
     }), { base: './node_modules' })
         .pipe(flatten({ includeParents: 1}))
         .pipe(sourcemaps.init())
-        //.pipe(postcss([ autoprefixer() ]))
+        .pipe(postcss([ autoprefixer() ]))
         //.pipe(gcmq())
         //.pipe(concat('libs.css'))
         //.pipe(rename({suffix: '.min'})) // Добавляем в название файла суфикс .min
@@ -214,7 +215,7 @@ gulp.task('sass', () =>
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'expanded'}))
-        // .pipe(postcss([ autoprefixer() ]))
+        //.pipe( postcss([ require('precss'), require('autoprefixer') ]) )
         //.pipe(gcmq())
         .pipe(concat('custom.css'))
         .pipe(rename({suffix: '.min'}))
@@ -312,16 +313,13 @@ gulp.task('inject', (done) => {
 
 
 
-
-
-
 // Copy all generated img files into build directory
 gulp.task('images', () =>
     gulp.src([
         path.src.img,
     ])
         .pipe(gulp.dest(path.build.img))
-        .pipe(imagemin([
+        .pipe(cache(imagemin([
                 imagemin.gifsicle({interlaced: true}),
                 imagemin.jpegtran({progressive: true}),
                 imagemin.optipng({optimizationLevel: 8}),
@@ -331,10 +329,10 @@ gulp.task('images', () =>
                         {cleanupIDs: false}
                     ]
                 })
-            ],{
+            ], {
                 verbose: true // output status treatment img files
             }
-        ))
+        )))
 
         .pipe(gulp.dest(path.build.img))
         .pipe(browserSync.reload({

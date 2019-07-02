@@ -372,7 +372,7 @@ gulp.task('clean', (cb) =>
 gulp.task('watch', function() {
     /*gulp.watch(path.watch.pug, gulp.series('pug'));
      gulp.watch(path.watch.htaccess, gulp.series('htaccess'));*/
-    gulp.watch(path.watch.html, gulp.series('html'));
+    gulp.watch(path.watch.html, gulp.series('html', 'inject'));
     //gulp.watch(path.watch.php, gulp.series('php'));
     gulp.watch(path.watch.sass, gulp.series('sass'));
     gulp.watch(path.watch.css, gulp.series('cssLibs'));

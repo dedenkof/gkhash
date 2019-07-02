@@ -1,5 +1,4 @@
 'use strict';
-// Del autoprefixer, gulp-group-css-media-queries, cache
 const gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     postcss = require('gulp-postcss'),
@@ -157,7 +156,6 @@ gulp.task('copyLibsCSS', () =>
     }), { base: './node_modules' })
         .pipe(flatten({ includeParents: 1}))
         .pipe(sourcemaps.init())
-        .pipe(postcss([ autoprefixer() ]))
         //.pipe(gcmq())
         //.pipe(concat('libs.css'))
         //.pipe(rename({suffix: '.min'})) // Добавляем в название файла суфикс .min
@@ -215,8 +213,8 @@ gulp.task('sass', () =>
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'expanded'}))
-        //.pipe( postcss([ require('precss'), require('autoprefixer') ]) )
-        //.pipe(gcmq())
+        .pipe(postcss([ autoprefixer() ]))
+        .pipe(gcmq())
         .pipe(concat('custom.css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(cleanCSS({level: 2}))
@@ -233,8 +231,8 @@ gulp.task('cssLibs', () =>
     gulp.src(path.src.cssLib)
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sourcemaps.init())
-        //.pipe(postcss([ autoprefixer() ]))
-        //.pipe(gcmq())
+        .pipe(postcss([ autoprefixer() ]))
+        .pipe(gcmq())
         //.pipe(concat('libs.css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(cleanCSS({
@@ -253,7 +251,7 @@ gulp.task('scriptsLibs', () =>
         .pipe(includeFiles())
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sourcemaps.init())
-        //.pipe(minJS())
+        .pipe(minJS())
         ///.pipe(concat('libs.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write('.', {addComment: false}))
@@ -270,7 +268,7 @@ gulp.task('scripts', () =>
         .pipe(includeFiles())
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sourcemaps.init())
-        //.pipe(minJS())
+        .pipe(minJS())
         //.pipe(concat('general.js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(sourcemaps.write('.', {addComment: false}))
